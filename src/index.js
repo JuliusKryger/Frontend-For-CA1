@@ -1,5 +1,7 @@
 import "./style.css"
 import "bootstrap/dist/css/bootstrap.css"
+import "./style.css"
+import "bootstrap/dist/css/bootstrap.css"
 import * as bootstrap from 'bootstrap';
 import '@popperjs/core';
 import $ from 'jquery';
@@ -7,66 +9,9 @@ import $ from 'jquery';
 import userFacade from "./userFacade"
 
 
-/* 
-  Add your JavaScript for all exercises Below or in separate js-files, which you must the import above
-*/
-
-/* JS For Exercise-3 below 
-    getStatus,
-    getAllUsers,
-    getPersonById,
-    createPerson,
-    updatePerson,
-    deletePersonById
-*/
-
-const table = document.querySelector('table.styled-table')
+const table = document.querySelector('table')
 userFacade.getAllUsers(table)
 
-/*
-getAllUsers()
-document.getElementById("findUserButton").addEventListener('click', event => getPersonById())
-document.getElementById("addUserButton").addEventListener('click', event => createPerson())
-document.getElementById("editUserButton").addEventListener('click', event => updatePerson())
-document.getElementById("deleteUserButton").addEventListener('click', event => deletePersonById())
-
-
-function getAllUsers()
-{
-  userFacade.getAllUsers().then(users => showAllUsers(users))
-}
-
-function showAllUsers(users) {
-  console.log(users)
-  const usersToHtml = users.map(user => `
-      <tr>
-        <td>${user.id}</td>
-      </tr>`
-  )
-  document.getElementById("allUserRows").innerHTML = usersToHtml.join("")
-}
-
-function getPersonById()
-{
-  const userId = document.getElementById("findUserText").value
-  userFacade.getPersonById(userId)
-    .then(user =>
-    {
-      document.getElementById("findUserDiv").innerHTML = `
-      <h5 style="margin-top:20px">We found a user!</h5>  
-      <table>
-          <tr><td>Id:</td><td>${user.id}</td></tr>
-          <tr><td>Age: </td><td>${user.age}</td></tr>
-          <tr><td>Name: </td><td>${user.name}</td></tr>
-          <tr><td>Gender: </td><td>${user.gender}</td></tr>
-          <tr><td>Email:</td><td>${user.email}</td></tr>
-        </table>`
-    })
-    .catch(err => errorHandling(err))
-}
-*/
-
-/*
 document.getElementById("addUserButton").addEventListener('click', function () {
   const email = document.getElementById("personEmail").value;
   const firstName = document.getElementById("personFirstName").value;
@@ -123,50 +68,9 @@ document.getElementById("addUserButton").addEventListener('click', function () {
   console.log(JSON.stringify(person));
 
   userFacade.createPerson(person)
-  */
 
-/*
-function updatePerson()
-{
-  const newUser = {
-    id: document.getElementById("editUserIdText").value,
-    age: document.getElementById("editUserAgeText").value,
-    name: document.getElementById("editUserNameText").value,
-    gender: document.getElementById("editUserGenderText").value,
-    email: document.getElementById("editUserEmailText").value 
-  }
+})
 
-  userFacade.updatePerson(newUser, document.getElementById("editUserIdText").value)
-    .then(user =>
-    {
-      document.getElementById("editUserResult").innerHTML = `
-      <h5 style="margin-top:20px">We updated the user successfully!</h5>  
-      <table>
-          <tr><td>Id:</td><td>${user.id}</td></tr>
-          <tr><td>Age: </td><td>${user.age}</td></tr>
-          <tr><td>Name: </td><td>${user.name}</td></tr>
-          <tr><td>Gender: </td><td>${user.gender}</td></tr>
-          <tr><td>Email:</td><td>${user.email}</td></tr>
-        </table>
-      `
-      getAllUsers();
-    })
-    .catch(err => errorHandling(err))
-}
-
-function deletePersonById()
-{
-  userFacade.deletePersonById(document.getElementById("deleteUserText").value)
-    .then(user =>
-    {
-      document.getElementById("deleteUserDiv").innerHTML = `
-      <h5 style="margin-top:20px">We deleted the user successfully!</h5>  
-    `
-      getAllUsers();
-    })
-    .catch(err => errorHandling(err))
-}
-*/
 
 function errorHandling(err)
 {
@@ -193,31 +97,7 @@ Do NOT focus on the code below, UNLESS you want to use this code for something d
 the Period2-week2-day3 Exercises
 */
 
-/*
 
-function hideAllShowOne(idToShow)
-{
 
-  document.getElementById("about_html").style = "display:none"
-  document.getElementById("ex1_html").style = "display:none"
-  document.getElementById("ex2_html").style = "display:none"
-  document.getElementById("ex3_html").style = "display:none"
-  document.getElementById(idToShow).style = "display:block"
-}
 
-function menuItemClicked(evt)
-{
-  const id = evt.target.id;
-  switch (id)
-  {
-    case "ex1": hideAllShowOne("ex1_html"); break
-    case "ex2": hideAllShowOne("ex2_html"); break
-    case "ex3": hideAllShowOne("ex3_html"); break
-    default: hideAllShowOne("about_html"); break
-  }
-  evt.preventDefault();
-}
-document.getElementById("menu").onclick = menuItemClicked;
-hideAllShowOne("about_html");
-})
-*/
+// DO NOT REMOVE THESE OR WRITE ANYTHING BEYOND THIS COMMENT.
