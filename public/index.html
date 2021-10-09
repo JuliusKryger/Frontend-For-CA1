@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hobby Buddy</title>
+</head>
+
+
+<body>
+
+
+  <!-- !OBS! DO NO PUT ANYTHING ABOVE THIS DIV-->
+  <div id="julemanden">
+  <!-- !OBS! DO NO PUT ANYTHING ABOVE THIS DIV-->
+
+
+    <!--<h4>All users of Hobby Buddy</h4>-->
+
+    <!--  START OF OUR SEARCH FUNCTIONALITY FOR OUR TABLE DATA AND OUR NAVIGATION BAR  -->
+    <div class="topnav">
+      <a class="active" href="#home">Home</a>
+      <a href="#all">Find Buddy</a>
+      <a href="#create">Sign Up</a>
+      <a href="#WIP">WIP</a>
+      <a href="#WIP">WIP</a>
+      <div class="search-container">
+        <form action="/action_page.php">
+          <input type="text" id="allUsersSearch" onkeyup="search()" placeholder="Search based on hobbies" title="Type in a name">
+        </form>
+      </div>
+    </div>
+    <!--  END OF OUR SEARCH FUNCTIONALITY FOR OUR TABLE DATA AND OUR NAVIGATION BAR -->
+
+
+    <section class="content" id="home">
+
+      <h5>homepage WIP</h5>
+
+    </section>
+
+
+    <!-- THIS IS THE START OF OUR CREATE USER FUNCTION -->
+    <section class="content" id="create">
+
+
+      <div class="col-3 input-effect">
+        <input class="effect-20" type="text" id="personFirstName">
+          <label>First Name</label>
+          <span class="focus-border">
+            <i></i>
+          </span>
+      </div>
+      <div class="col-3 input-effect">
+        <input class="effect-20" type="text" id="personLastName">
+          <label>Last Name</label>
+          <span class="focus-border">
+            <i></i>
+          </span>
+      </div>
+      <div class="col-3 input-effect">
+        <input class="effect-20" type="text" id="personEmail">
+          <label>Email</label>
+          <span class="focus-border">
+            <i></i>
+          </span>
+      </div>
+      <div class="col-3 input-effect">
+        <input class="effect-20" type="text" id="personPhone">
+          <label>Phone Number</label>
+          <span class="focus-border">
+            <i></i>
+          </span>
+      </div>
+      <div class="col-3 input-effect">
+        <input class="effect-20" type="text" id="addressCity">
+          <label>City</label>
+          <span class="focus-border">
+            <i></i>
+          </span>
+      </div>
+      <div class="col-3 input-effect">
+        <input class="effect-20" type="text" id="addressZip">
+          <label>Postal Code</label>
+          <span class="focus-border">
+            <i></i>
+          </span>
+      </div>
+      <div class="col-3 input-effect">
+        <input class="effect-20" type="text" id="addressStreet">
+          <label>Street</label>
+          <span class="focus-border">
+            <i></i>
+          </span>
+      </div>
+      <div class="col-3 input-effect">
+        <input class="effect-20" type="text" id="personHobby">
+          <label>Your Hobby</label>
+          <span class="focus-border">
+            <i></i>
+          </span>
+      </div>
+      <div class="col-3 input-effect">
+        <input class="effect-20" type="text" id="personHobbyCat">
+          <label>Hobby Category</label>
+          <span class="focus-border">
+            <i></i>
+          </span>
+      </div>
+      <div class="col-3 input-effect">
+        <input class="effect-20" type="text" id="personHobbyType">
+          <label>Hobby Type</label>
+          <span class="focus-border">
+            <i></i>
+          </span>
+      </div>
+      <div class="col-3 input-effect">
+        <input class="effect-20" type="text" id="personHobbyWiki">
+          <label>Hobby Domain</label>
+          <span class="focus-border">
+            <i></i>
+          </span>
+      </div>
+
+
+<!--  MAY NOT BE NEEDED LIKE THIS ANYMORE
+    <table>
+      <thead>
+        <tr>
+          <td>first Name</td>
+          <td><input type="text" id="personFirstName" /></td>
+        </tr>
+        <tr>
+          <td>last Name</td>
+          <td><input type="text" id="personLastName" /></td>
+        </tr>
+        <tr>
+          <td>Email</td>
+          <td><input type="text" id="personEmail" /></td>
+        </tr>
+        <tr>
+          <td>Phone Number</td>
+          <td><input type="text" id="personPhone" /></td>
+        </tr>
+        <tr>
+          <td>City</td>
+          <td><input type="text" id="addressCity" /></td>
+        </tr>
+        <tr>
+          <td>Zip code</td>
+          <td><input type="text" id="addressZip" /></td>
+        </tr>
+        <tr>
+          <td>Street</td>
+          <td><input type="text" id="addressStreet" /></td>
+        </tr>
+        <tr>
+          <td>hobby name</td>
+          <td><input type="text" id="personHobby" /></td>
+        </tr>
+        <tr>
+          <td>Hobby category</td>
+          <td><input type="text" id="personHobbyCat" /></td>
+        </tr>
+        <tr>
+          <td>Hobby type</td>
+          <td><input type="text" id="personHobbyType" /></td>
+        </tr>
+        <tr>
+          <td>Hobby wikiLink</td>
+          <td><input type="text" id="personHobbyWiki" /></td>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  -->
+    <!-- THIS IS THE BUTTON TO ADD WHEN ALL FIELDS ARE FILLED OUT -->
+    <input type="button" id="addUserButton" value="Add" />
+    </section>
+    <!-- THIS IS THE END OF OUR CREATE USER FUNCTION -->
+
+
+
+
+
+    <!--  THIS IS THE START OF THE TABLE FOR ALL USERS PRINT -->
+    <section class="content" id="all">
+    <table class="styled-table" id="allUsersTable">
+      <thead>
+          <tr>
+            <th>Hobby</th>
+            <th>Bruger ID</th>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Email</th>
+            <th>Phone number</th>
+            <th>Street</th>
+            <th>City</th>
+            <th>Postal code</th>
+          </tr>
+      </thead>
+      <tbody class="table">
+      </tbody>
+  </table>
+  </section>
+  <!--  THIS IS THE END OF THE TABLE FOR ALL USERS PRINT -->
+
+
+
+
+
+
+
+  <!-- !OBS! DO NO PUT ANYTHING BEYOND THIS DIV-->
+  </div>
+  <!-- !OBS! DO NO PUT ANYTHING BEYOND THIS DIV-->
+
+
+
+
+
+
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" type="text/javascript"></script>
+  <script>
+// ANY FUNCTIONS THAT CAN'T BE MADE IN INDEX.JS IS PUT HERE.
+
+
+// THIS FUNCTION IS FOR THE NAVIGATION BAR, AND SHOWS ONLY THE ACTIVE SECTION, BASED ON #
+$( document ).ready(function() {
+        $("section").hide();
+
+        $(window).on("hashchange", function(){
+            var hash = window.location.hash.substring(1); // HASH PARTS OF THE URL WHITOUT THE FIRST LETTER (#)
+            $("section").hide();
+            $("#"+hash).show();
+        });
+    });
+
+
+
+// THIS IS OUR SEARCH FUNCTION FOR THE SHOW ALL USERS TABLE.
+    function search() {
+      // ALL MY VARIABLES
+      var input, filter, table, tr, td, i, txtValue;
+      input = document.getElementById("allUsersSearch");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("allUsersTable");
+      tr = table.getElementsByTagName("tr");
+    
+      // LOOPING THROUGH ALL TABLE ROWS, AND HIDING THOSE WHO DO NOT MATCH THE SEARCH QUERY.
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+    }
+    </script>  
+</body>
+
+
+
+</html>
