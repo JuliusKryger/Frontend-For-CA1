@@ -1,10 +1,18 @@
 const URL = "https://www.test.juliusmadsen.dk/devops-starter/api/person";
 
+//works
 function getStatus() {
     return fetch(URL + "/status")
     .then(res => handleHttpErrors(res))
 }
 
+
+function getPersonByIdNoDom(id) {
+    return fetch(URL + '/' + id)
+        .then(res => handleHttpErrors(res))
+}
+
+//works
 function getPersonById(id, domElement) {
     return fetch("https://www.test.juliusmadsen.dk/devops-starter/api/person/" + id)
     .then(function (response) {
@@ -26,8 +34,9 @@ function getPersonById(id, domElement) {
     })
 }
 
+//works
 function getAllUsers(domElement) {
-    fetch("https://www.test.juliusmadsen.dk/devops-starter/api/person/all")
+    fetch(URL + "/all")
         .then(function (response) {
             return response.json();
         })
@@ -49,21 +58,24 @@ function getAllUsers(domElement) {
         })
 }
 
+//works
 function createPerson(person) {
     const options = makeOptions('POST', person)
-    return fetch("https://www.test.juliusmadsen.dk/devops-starter/api/person/create", options)
+    return fetch(URL + "/create", options)
         .then(res => handleHttpErrors(res))
 }
 
+//not yet implemented
 function updatePerson(id, person) {
     const options = makeOptions('PUT', person)
-    return fetch(URL + '/update' + id, options)
+    return fetch(URL + '/update/' + id, options)
         .then(res => handleHttpErrors(res))
 }
 
+//works
 function deletePersonById(id) {
     const options = makeOptions('DELETE', { id })
-    return fetch(URL + '/' + id, options)
+    return fetch(URL + '/delete/' + id, options)
         .then(res => handleHttpErrors(res))
 }
 
@@ -73,7 +85,8 @@ const userFacade = {
     getPersonById,
     createPerson,
     updatePerson,
-    deletePersonById
+    deletePersonById,
+    getPersonByIdNoDom
 }
 
 function makeOptions(method, body) {

@@ -28,6 +28,59 @@ h5 {
   }
   /* (END) */
 
+
+
+
+/* (START) THIS BELOW IS THE CSS FOR OUR GET USERS TABLE */
+.styled-table2 {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.styled-table2 td, .styled-table2 th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.styled-table2 tr:hover {background-color: #ddd;}
+
+.styled-table2 th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+/* (END) */
+
+
+/* (START) THIS BELOW IS THE CSS FOR OUR update USERS TABLE */
+.styled-table3 {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.styled-table3 td, .styled-table3 th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.styled-table3 tr:hover {background-color: #ddd;}
+
+.styled-table3 th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+/* (END) */
+
+
+
+
   /* (START) ALL OF THIS BELOW IS THE CSS FOR OUR NAVIGATION BAR AND SEARCH FUNCTION */
   .topnav {
     overflow: hidden;

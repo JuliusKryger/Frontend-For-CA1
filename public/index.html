@@ -21,10 +21,11 @@
     <!--  START OF OUR SEARCH FUNCTIONALITY FOR OUR TABLE DATA AND OUR NAVIGATION BAR  -->
     <div class="topnav">
       <a class="active" href="#home">Home</a>
-      <a href="#all">Find Buddy</a>
-      <a href="#create">Sign Up</a>
-      <a href="#update">update</a>
-      <a href="#getUser">getUserP</a>
+      <a href="#all">Find Buddies</a>
+      <a href="#getUser">View Your Profile</a>
+      <a href="#create">Register</a>
+      <a href="#update">Update Your Infomation</a>
+      <a href="#delete">Delete Your Profile</a>
       <div class="search-container">
         <form action="/action_page.php">
           <input type="text" id="allUsersSearch" onkeyup="search()" placeholder="Search based on hobbies" title="Type in a name">
@@ -44,7 +45,66 @@
     <!-- THIS IS ODUR HOMEPAGE END -->
 
 
-    <!-- THIS IS THE START OF OUR CREATE USER FUNCTION -->
+
+
+
+    <!--  THIS IS THE START OF THE TABLE FOR ALL USERS PRINT -->
+    <section class="content" id="all">
+    <table class="styled-table" id="allUsersTable">
+      <thead>
+          <tr>
+            <th>Hobby</th>
+            <th>Bruger ID</th>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Email</th>
+            <th>Phone number</th>
+            <th>Street</th>
+            <th>City</th>
+            <th>Postal code</th>
+          </tr>
+      </thead>
+      <tbody class="table">
+      </tbody>
+  </table>
+  </section>
+  <!--  THIS IS THE END OF THE TABLE FOR ALL USERS PRINT -->
+
+
+
+  <!-- HERE WE GET A USER ON A SPECIFIC ID -->
+  <section class="content" id="getUser">
+
+    <table class="styled-table2" id="getUserTable">
+      <thead>
+          <tr>
+            <th>Hobby</th>
+            <th>Bruger ID</th>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Email</th>
+            <th>Phone number</th>
+            <th>Street</th>
+            <th>City</th>
+            <th>Postal code</th>
+          </tr>
+      </thead>
+      <tbody class="table">
+      </tbody>
+  </table>
+
+
+  <div>
+    <input type="text" id="idValue">
+    <input role="button" type="button" id="getUserButton" value="Click to view profile!" />
+  </div>
+
+  </section>
+  <!-- THIS IS THE END OF GET USER -->
+
+
+
+      <!-- THIS IS THE START OF OUR CREATE USER FUNCTION -->
     <section class="content" id="create">
 
 
@@ -139,53 +199,6 @@
 
 
 
-    <!--  THIS IS THE START OF THE TABLE FOR ALL USERS PRINT -->
-    <section class="content" id="all">
-    <table class="styled-table" id="allUsersTable">
-      <thead>
-          <tr>
-            <th>Hobby</th>
-            <th>Bruger ID</th>
-            <th>First name</th>
-            <th>Last name</th>
-            <th>Email</th>
-            <th>Phone number</th>
-            <th>Street</th>
-            <th>City</th>
-            <th>Postal code</th>
-          </tr>
-      </thead>
-      <tbody class="table">
-      </tbody>
-  </table>
-  </section>
-  <!--  THIS IS THE END OF THE TABLE FOR ALL USERS PRINT -->
-
-
-
-  <!-- HERE WE GET A USER ON A SPECIFIC ID -->
-  <section class="content" id="getUser">
-
-    <table class="test" id="getUserTable">
-      <thead>
-          <tr>
-            <th>Hobby</th>
-            <th>Bruger ID</th>
-            <th>First name</th>
-            <th>Last name</th>
-            <th>Email</th>
-            <th>Phone number</th>
-            <th>Street</th>
-            <th>City</th>
-            <th>Postal code</th>
-          </tr>
-      </thead>
-      <tbody class="table">
-      </tbody>
-  </table>
-
-  </section>
-  <!-- THIS IS THE END OF GET USER -->
 
 
 
@@ -193,23 +206,122 @@
   <section class="content" id="update">
 
 
-
-    <div>
-      <input type="text" id="updateFN">
+    <div class="col-3 input-effect">
+      <input class="effect-20" type="text" id="personFirstName2">
+        <label>First Name</label>
+        <span class="focus-border">
+          <i></i>
+        </span>
+    </div>
+    <div class="col-3 input-effect">
+      <input class="effect-20" type="text" id="personLastName2">
+        <label>Last Name</label>
+        <span class="focus-border">
+          <i></i>
+        </span>
+    </div>
+    <div class="col-3 input-effect">
+      <input class="effect-20" type="text" id="personEmail2">
+        <label>Email</label>
+        <span class="focus-border">
+          <i></i>
+        </span>
+    </div>
+    <div class="col-3 input-effect">
+      <input class="effect-20" type="text" id="personPhone2">
+        <label>Phone Number</label>
+        <span class="focus-border">
+          <i></i>
+        </span>
+    </div>
+    <div class="col-3 input-effect">
+      <input class="effect-20" type="text" id="addressCity2">
+        <label>City</label>
+        <span class="focus-border">
+          <i></i>
+        </span>
+    </div>
+    <div class="col-3 input-effect">
+      <input class="effect-20" type="text" id="addressZip2">
+        <label>Postal Code</label>
+        <span class="focus-border">
+          <i></i>
+        </span>
+    </div>
+    <div class="col-3 input-effect">
+      <input class="effect-20" type="text" id="addressStreet2">
+        <label>Street</label>
+        <span class="focus-border">
+          <i></i>
+        </span>
+    </div>
+    <div class="col-3 input-effect">
+      <input class="effect-20" type="text" id="personHobby2">
+        <label>Your Hobby</label>
+        <span class="focus-border">
+          <i></i>
+        </span>
+    </div>
+    <div class="col-3 input-effect">
+      <input class="effect-20" type="text" id="personHobbyCat2">
+        <label>Hobby Category</label>
+        <span class="focus-border">
+          <i></i>
+        </span>
+    </div>
+    <div class="col-3 input-effect">
+      <input class="effect-20" type="text" id="personHobbyType2">
         <label>Hobby Type</label>
+        <span class="focus-border">
+          <i></i>
+        </span>
     </div>
-
-
-
-    <div>
-      <input  type="text" id="updateLN">
+    <div class="col-3 input-effect">
+      <input class="effect-20" type="text" id="personHobbyWiki2">
         <label>Hobby Domain</label>
+        <span class="focus-border">
+          <i></i>
+        </span>
     </div>
+
+  <!-- THIS IS THE BUTTON TO ADD WHEN ALL FIELDS ARE FILLED OUT 
+  <div class="col-3 input-effect">
+    <input class="button-3" role="button" type="button" id="addUserButton" value="Click to register!" />
+  </div> -->
+
+
+<div>
+<input type="text" id="idValueU">
+<input role="button" type="button" id="updateUserButton" value="Click to view profile!" />
+</div>
+
+
 
 
 
   </section>
   <!-- THIS IS THE END OF OUR UPDATE PERSON -->
+
+
+
+
+<!--  START OF THE DELETE FUNCTION  -->
+  <section class="content" id="delete">
+
+    <div>
+      <input type="text" id="deleteValue">
+      <input role="button" type="button" id="deleteUserButton" value="Click to delete profile!" />
+      <p>Warning! this is not reversable!</p>
+    </div>
+
+  </section>
+<!--  END OF THE DELETE FUNCTION  -->
+
+
+
+
+
+
 
 
 
