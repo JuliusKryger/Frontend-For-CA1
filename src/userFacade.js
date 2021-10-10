@@ -10,6 +10,9 @@ function getPersonById(id) {
         .then(res => handleHttpErrors(res))
 }
 
+
+
+
 function getAllUsers(domElement) {
     fetch("https://www.test.juliusmadsen.dk/devops-starter/api/person/all")
         .then(function (response) {
