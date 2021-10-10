@@ -5,13 +5,26 @@ function getStatus() {
     .then(res => handleHttpErrors(res))
 }
 
-function getPersonById(id) {
-    return fetch(URL + '/' + id)
-        .then(res => handleHttpErrors(res))
+function getPersonById(id, domElement) {
+    return fetch("https://www.test.juliusmadsen.dk/devops-starter/api/person/" + id)
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (data) {
+        console.log(data)
+            let tr = domElement.insertRow()
+            tr.insertCell().textContent = data.hobbies[0].name
+            tr.insertCell().textContent = data.id
+            tr.insertCell().textContent = data.firstName
+            tr.insertCell().textContent = data.lastName
+            tr.insertCell().textContent = data.email
+            tr.insertCell().textContent = data.phones[0].number
+            tr.insertCell().textContent = data.address.street
+            tr.insertCell().textContent = data.address.cityInfo.city
+            tr.insertCell().textContent = data.address.cityInfo.zipCode
+        
+    })
 }
-
-
-
 
 function getAllUsers(domElement) {
     fetch("https://www.test.juliusmadsen.dk/devops-starter/api/person/all")
@@ -44,7 +57,7 @@ function createPerson(person) {
 
 function updatePerson(id, person) {
     const options = makeOptions('PUT', person)
-    return fetch(URL + '/create' + id, options)
+    return fetch(URL + '/update' + id, options)
         .then(res => handleHttpErrors(res))
 }
 

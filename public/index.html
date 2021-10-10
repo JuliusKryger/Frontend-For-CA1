@@ -23,8 +23,8 @@
       <a class="active" href="#home">Home</a>
       <a href="#all">Find Buddy</a>
       <a href="#create">Sign Up</a>
-      <a href="#WIP">WIP</a>
-      <a href="#WIP">WIP</a>
+      <a href="#update">update</a>
+      <a href="#getUser">getUserP</a>
       <div class="search-container">
         <form action="/action_page.php">
           <input type="text" id="allUsersSearch" onkeyup="search()" placeholder="Search based on hobbies" title="Type in a name">
@@ -34,11 +34,14 @@
     <!--  END OF OUR SEARCH FUNCTIONALITY FOR OUR TABLE DATA AND OUR NAVIGATION BAR -->
 
 
+
+    <!-- THIS IS OUR HOMEPAGE START -->
     <section class="content" id="home">
 
       <h5>homepage WIP</h5>
 
     </section>
+    <!-- THIS IS ODUR HOMEPAGE END -->
 
 
     <!-- THIS IS THE START OF OUR CREATE USER FUNCTION -->
@@ -159,6 +162,54 @@
   <!--  THIS IS THE END OF THE TABLE FOR ALL USERS PRINT -->
 
 
+
+  <!-- HERE WE GET A USER ON A SPECIFIC ID -->
+  <section class="content" id="getUser">
+
+    <table class="test" id="getUserTable">
+      <thead>
+          <tr>
+            <th>Hobby</th>
+            <th>Bruger ID</th>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Email</th>
+            <th>Phone number</th>
+            <th>Street</th>
+            <th>City</th>
+            <th>Postal code</th>
+          </tr>
+      </thead>
+      <tbody class="table">
+      </tbody>
+  </table>
+
+  </section>
+  <!-- THIS IS THE END OF GET USER -->
+
+
+
+  <!-- THIS IS THE PLACE FOR OUR UPDATE FUNCTIONALITY -->
+  <section class="content" id="update">
+
+
+
+    <div>
+      <input type="text" id="updateFN">
+        <label>Hobby Type</label>
+    </div>
+
+
+
+    <div>
+      <input  type="text" id="updateLN">
+        <label>Hobby Domain</label>
+    </div>
+
+
+
+  </section>
+  <!-- THIS IS THE END OF OUR UPDATE PERSON -->
 
 
 

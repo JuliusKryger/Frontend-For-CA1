@@ -9,9 +9,20 @@ import $ from 'jquery';
 import userFacade from "./userFacade"
 
 
+
+
+//this is get single user by id
+const idTable = document.querySelector('table.test')
+let id = 1;
+userFacade.getPersonById(id, idTable)
+
+
+//This is get all users
 const table = document.querySelector('table')
 userFacade.getAllUsers(table)
 
+
+//this is create user
 document.getElementById("addUserButton").addEventListener('click', function () {
   const email = document.getElementById("personEmail").value;
   const firstName = document.getElementById("personFirstName").value;
@@ -70,6 +81,11 @@ document.getElementById("addUserButton").addEventListener('click', function () {
   userFacade.createPerson(person)
 
 })
+
+
+
+
+
 
 
 function errorHandling(err)
